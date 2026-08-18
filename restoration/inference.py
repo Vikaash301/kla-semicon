@@ -271,8 +271,12 @@ def run_inference(
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input-dir", required=True)
-    parser.add_argument("--output-dir", required=True)
+    parser.add_argument("input_dir_positional", nargs="?", default=None,
+                         help="Test images directory (positional form of --input-dir)")
+    parser.add_argument("output_dir_positional", nargs="?", default=None,
+                         help="Output directory (positional form of --output-dir)")
+    parser.add_argument("--input-dir", default=None)
+    parser.add_argument("--output-dir", default=None)
     parser.add_argument("--checkpoint", default=DEFAULT_CHECKPOINT)
     parser.add_argument("--device", default="auto")
     parser.add_argument("--precision", choices=("fp32", "fp16", "bf16", "auto"), default="fp32")
@@ -280,10 +284,17 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--benchmark-json")
     parser.add_argument("--manifest", help="Alias for --benchmark-json")
     arguments = parser.parse_args(argv)
+    input_dir = arguments.input_dir or arguments.input_dir_positional
+    output_dir = arguments.output_dir or arguments.output_dir_positional
+    if not input_dir or not output_dir:
+        parser.error(
+            "input and output directories are required: pass them positionally "
+            "(python inference.py <input_dir> <output_dir>) or as --input-dir/--output-dir"
+        )
     benchmark_file = arguments.benchmark_json or arguments.manifest
     report = run_inference(
-        arguments.input_dir,
-        arguments.output_dir,
+        input_dir,
+        output_dir,
         arguments.checkpoint,
         device=arguments.device,
         precision=arguments.precision,
