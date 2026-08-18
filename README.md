@@ -11,6 +11,14 @@ python -m pip install -r requirements.txt
 python inference.py --input-dir path\to\NoisyLR --output-dir restored_test_outputs
 ```
 
+**GPU support:** `pip install -r requirements.txt` installs the CPU-only `torch` wheel from PyPI (confirmed: `torch.cuda.is_available()` is `False` after a plain install). This still runs correctly, just far slower (~325ms vs. ~21ms median latency, measured on the same hardware). To get the GPU path — required to reproduce the reported latency numbers — install a CUDA build of `torch` matching the machine's CUDA driver *before* the line above, e.g.:
+
+```powershell
+python -m pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+(swap `cu121` for whatever `nvidia-smi` reports as supported; see [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/)). `inference.py --device auto` then selects CUDA automatically with no other changes needed.
+
 Input files must be top-level 2D float `.npy` arrays sized `128x128`. Outputs retain each basename and are float32 arrays at exactly 2x spatial resolution. The run emits a provenance manifest (`--manifest`) recording the checkpoint SHA-256, device, and per-image timing.
 
 `requirements.txt` lists only the packages the shipped code actually imports (verified by AST import scanning and a clean-venv install). `requirements-freeze.txt` is the literal `pip freeze` from the development machine, kept for exact reproducibility; installing it pulls in unrelated packages from that machine and isn't recommended for a fresh setup.
@@ -50,6 +58,16 @@ EdgeRestore v2 improves over bicubic by `+6.1112 dB` PSNR, `+0.25913` SSIM, `-0.
 Per-image, v2 loses to bicubic on **0/320** PSNR cases, **0/320** MS-SSIM cases, 4/320 SSIM cases, and 33/320 LPIPS cases. The previous model lost on 2/320 PSNR, 36/320 SSIM, and 61/320 LPIPS cases, so v2 is strictly more reliable per-image as well as on the mean.
 
 Best case is `000960` at 40.83 dB; the disclosed worst case is `000406` at 17.11 dB.
+
+### Visual comparisons
+
+| Best case (`000960`, 40.83 dB) | Worst case (`000406`, 17.11 dB) |
+|---|---|
+| ![Best case restoration](artifacts/comparisons/000960_comparison.png) | ![Worst case restoration](artifacts/comparisons/000406_comparison.png) |
+
+| Additional example (`002057`) | Aggregate before/after |
+|---|---|
+| ![Additional example restoration](artifacts/comparisons/002057_comparison.png) | ![Aggregate before/after summary](artifacts/comparisons/aggregate_before_after.png) |
 
 ### Selection
 
@@ -110,6 +128,6 @@ The defensible claim is about the **recipe**, not the architecture: bicubic-anch
 
 ## Evidence boundaries
 
-Local validation uses a deterministic filename-random 10% split of the 3,200 released pairs. This is held-out **IID** evidence, not proof of source-level OOD generalization. The model still over-smooths some stochastic high-frequency textures; `artifacts/comparisons/000406_comparison.png` is the disclosed worst case. No defect labels or physical pixel calibration were supplied, so defect recall and metrology accuracy are not claimed. Hardware timing is reported only for the local RTX 5070 Ti Laptop GPU. H100, official hidden-test, and true OOD performance remain unverified until KLA evaluates the submission.
+Local validation uses a deterministic filename-random 10% split of the 3,200 released pairs. This is held-out **IID** evidence, not proof of source-level OOD generalization. The model still over-smooths some stochastic high-frequency textures; `000406` (shown above) is the disclosed worst case. No defect labels or physical pixel calibration were supplied, so defect recall and metrology accuracy are not claimed. Hardware timing is reported only for the local RTX 5070 Ti Laptop GPU. H100, official hidden-test, and true OOD performance remain unverified until KLA evaluates the submission.
 
 See [REFERENCES.md](REFERENCES.md) for primary sources and [the architecture decision](docs/decisions/0001-compact-residual-restoration.md) for rejected alternatives.
