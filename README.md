@@ -13,6 +13,8 @@ python inference.py --input-dir path\to\NoisyLR --output-dir restored_test_outpu
 
 Input files must be top-level 2D float `.npy` arrays sized `128x128`. Outputs retain each basename and are float32 arrays at exactly 2x spatial resolution. The run emits a provenance manifest (`--manifest`) recording the checkpoint SHA-256, device, and per-image timing.
 
+`requirements.txt` lists only the packages the shipped code actually imports (verified by AST import scanning and a clean-venv install). `requirements-freeze.txt` is the literal `pip freeze` from the development machine, kept for exact reproducibility; installing it pulls in unrelated packages from that machine and isn't recommended for a fresh setup.
+
 ## Design
 
 The network predicts only the **residual on top of an exact bicubic 2x upsample**.
