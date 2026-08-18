@@ -1,0 +1,56 @@
+{
+  "branch": "Branch 3: Multi-Scale Sobolev Gradient + Flat-Field TV + Null-Space Projector P_N + Batched D4 TTA",
+  "validation_samples": 320,
+  "checkpoint": "checkpoints\\evidence_dar_best.pt",
+  "device": "cuda (NVIDIA GeForce RTX 5070 Ti Laptop GPU)",
+  "results": {
+    "Standard Single-Pass (Baseline)": {
+      "PSNR_mean": 27.9024,
+      "PSNR_std": 4.6102,
+      "SSIM_mean": 0.74981,
+      "SSIM_std": 0.15589,
+      "CD_Error_pct_mean": 17.431,
+      "Visual_Noise_Floor_Speckle": 0.13504,
+      "Null_Space_Residual_inf": "3.666e-01",
+      "Null_Space_Invariant_Satisfied": false,
+      "Latency_GPU_ms_median": 4.64,
+      "Latency_GPU_ms_p90": 5.04
+    },
+    "With Null-Space Projector P_N": {
+      "PSNR_mean": 22.1319,
+      "PSNR_std": 3.5499,
+      "SSIM_mean": 0.50547,
+      "SSIM_std": 0.19063,
+      "CD_Error_pct_mean": 36.478,
+      "Visual_Noise_Floor_Speckle": 0.24437,
+      "Null_Space_Residual_inf": "3.386e-02",
+      "Null_Space_Invariant_Satisfied": false,
+      "Latency_GPU_ms_median": 4.72,
+      "Latency_GPU_ms_p90": 5.78
+    },
+    "With Batched 8-Fold D4 TTA": {
+      "PSNR_mean": 27.9507,
+      "PSNR_std": 4.6266,
+      "SSIM_mean": 0.7515,
+      "SSIM_std": 0.15626,
+      "CD_Error_pct_mean": 17.68,
+      "Visual_Noise_Floor_Speckle": 0.13395,
+      "Null_Space_Residual_inf": "3.658e-01",
+      "Null_Space_Invariant_Satisfied": false,
+      "Latency_GPU_ms_median": 109.9,
+      "Latency_GPU_ms_p90": 148.75
+    },
+    "Full Branch 3 (8x D4 TTA + Null-Space P_N)": {
+      "PSNR_mean": 22.1372,
+      "PSNR_std": 3.5503,
+      "SSIM_mean": 0.50574,
+      "SSIM_std": 0.19076,
+      "CD_Error_pct_mean": 36.326,
+      "Visual_Noise_Floor_Speckle": 0.24409,
+      "Null_Space_Residual_inf": "3.299e-02",
+      "Null_Space_Invariant_Satisfied": false,
+      "Latency_GPU_ms_median": 109.93,
+      "Latency_GPU_ms_p90": 150.22
+    }
+  }
+}

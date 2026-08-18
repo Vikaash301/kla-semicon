@@ -1,0 +1,42 @@
+{
+  "device": "cuda",
+  "precision": "fp32",
+  "use_tta": false,
+  "images": 400,
+  "parameter_count": 543724,
+  "checkpoint_path": "checkpoints\\evidence_dar_backup_epoch67.pt",
+  "checkpoint_sha256": "f6381d84fa70eae627b38b8c01985ed37c1f8184b53988a782b9b15ff10070f6",
+  "checkpoint_bytes": 8971550,
+  "runtime": {
+    "python_version": "3.12.10",
+    "torch_version": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "warmup_per_shape": 1
+  },
+  "model_latency_ms": {
+    "median": 4.685455799102783,
+    "p90": 5.79552640914917,
+    "p95": 6.147480177879332
+  },
+  "end_to_end_ms": {
+    "median": 5.850350000400795,
+    "p90": 7.023670000489802,
+    "p95": 7.42418499976338
+  },
+  "by_shape": {
+    "128x128": {
+      "count": 400,
+      "model_latency_ms": {
+        "median": 4.685455799102783,
+        "p90": 5.79552640914917,
+        "p95": 6.147480177879332
+      },
+      "end_to_end_ms": {
+        "median": 5.850350000400795,
+        "p90": 7.023670000489802,
+        "p95": 7.42418499976338
+      }
+    }
+  }
+}

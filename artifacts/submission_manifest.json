@@ -1,0 +1,12 @@
+{
+  "checkpoint": "checkpoints/best.pt",
+  "checkpoint_bytes": 849281,
+  "checkpoint_sha256": "d1898b73ace135004d112febd55bc80ae5f52e2fcd007b1a1d101c5bc2fab140",
+  "official_test_inputs": 400,
+  "restored_outputs": 400,
+  "basenames_match": true,
+  "shape_dtype_range_finiteness_errors": [],
+  "outputs_aggregate_sha256": "71ba01c0c04bcc7af12d842f371e247c52bfecac43993d0c7274c2f9509fabe0",
+  "precision": "fp32",
+  "note": "Aggregate digest updates SHA-256 with each sorted basename followed by its .npy file bytes."
+}

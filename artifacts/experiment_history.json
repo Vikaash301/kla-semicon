@@ -1,0 +1,31 @@
+{
+  "final_model_training": {
+    "stage_1": {
+      "epochs": 14,
+      "learning_rate": 0.0002,
+      "elapsed_seconds": 119.8,
+      "best_validation_psnr": 27.6639
+    },
+    "stage_2": {
+      "epochs": 10,
+      "learning_rate": 0.00005,
+      "elapsed_seconds": 91.5,
+      "best_epoch": 23,
+      "best_validation_psnr": 27.76374203515934
+    },
+    "total_observed_training_seconds": 211.3,
+    "seed": 2026,
+    "train_pairs": 2880,
+    "validation_pairs": 320
+  },
+  "numerical_safety_review": {
+    "nonfinite_outputs_before_guard": 4,
+    "affected_test_stems": ["000105", "000173", "000215", "000268"],
+    "validation_max_gate_product_before_guard": 146.75845336914062,
+    "gate_product_bound": 256.0,
+    "input_bound": [-16.0, 16.0],
+    "nonfinite_outputs_after_guard": 0,
+    "held_out_metrics_changed_at_reported_precision": false
+  },
+  "note": "Elapsed times and activation diagnostics were captured from the local console runs on 2026-08-14; final metrics and output invariants are independently recomputable from canonical artifacts."
+}

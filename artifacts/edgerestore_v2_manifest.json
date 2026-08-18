@@ -1,0 +1,42 @@
+{
+  "device": "cuda",
+  "precision": "fp32",
+  "use_tta": false,
+  "images": 400,
+  "parameter_count": 6939289,
+  "checkpoint_path": "checkpoints\\edgerestore_v2.pt",
+  "checkpoint_sha256": "69f6cc38473fb9a9082491cbba93bfdf2e25e8d0a1829a5b88b0dbd5c0cc8526",
+  "checkpoint_bytes": 27876717,
+  "runtime": {
+    "python_version": "3.12.10",
+    "torch_version": "2.11.0+cu130",
+    "cuda_runtime": "13.0",
+    "device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "warmup_per_shape": 1
+  },
+  "model_latency_ms": {
+    "median": 20.985599517822266,
+    "p90": 51.82826728820801,
+    "p95": 58.92427864074707
+  },
+  "end_to_end_ms": {
+    "median": 22.9752000013832,
+    "p90": 56.26349999874947,
+    "p95": 65.4194849958003
+  },
+  "by_shape": {
+    "128x128": {
+      "count": 400,
+      "model_latency_ms": {
+        "median": 20.985599517822266,
+        "p90": 51.82826728820801,
+        "p95": 58.92427864074707
+      },
+      "end_to_end_ms": {
+        "median": 22.9752000013832,
+        "p90": 56.26349999874947,
+        "p95": 65.4194849958003
+      }
+    }
+  }
+}

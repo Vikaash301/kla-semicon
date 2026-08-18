@@ -1,0 +1,8 @@
+numpy==2.4.4
+torch==2.11.0
+opencv-python==5.0.0.93
+scikit-image==0.25.2
+lpips==0.1.4
+pytorch-msssim==1.0.0
+matplotlib==3.10.5
+pytest==9.1.1

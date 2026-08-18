@@ -1,0 +1,42 @@
+{
+  "device": "cpu",
+  "precision": "fp32",
+  "use_tta": false,
+  "images": 400,
+  "parameter_count": 6939289,
+  "checkpoint_path": "checkpoints\\edgerestore_v2.pt",
+  "checkpoint_sha256": "69f6cc38473fb9a9082491cbba93bfdf2e25e8d0a1829a5b88b0dbd5c0cc8526",
+  "checkpoint_bytes": 27876717,
+  "runtime": {
+    "python_version": "3.12.10",
+    "torch_version": "2.11.0+cpu",
+    "cuda_runtime": null,
+    "device_name": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
+    "warmup_per_shape": 1
+  },
+  "model_latency_ms": {
+    "median": 325.9514500023215,
+    "p90": 404.3779999999971,
+    "p95": 436.4505750014357
+  },
+  "end_to_end_ms": {
+    "median": 329.1683000024932,
+    "p90": 407.9959799979407,
+    "p95": 439.47343500258256
+  },
+  "by_shape": {
+    "128x128": {
+      "count": 400,
+      "model_latency_ms": {
+        "median": 325.9514500023215,
+        "p90": 404.3779999999971,
+        "p95": 436.4505750014357
+      },
+      "end_to_end_ms": {
+        "median": 329.1683000024932,
+        "p90": 407.9959799979407,
+        "p95": 439.47343500258256
+      }
+    }
+  }
+}

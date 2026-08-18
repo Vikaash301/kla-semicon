@@ -1,0 +1,200 @@
+{
+  "1. Baseline Bicubic Skip (alpha=1.00)": {
+    "PSNR_dB": 28.1536,
+    "PSNR_std": 4.2763,
+    "SSIM": 0.75016,
+    "SSIM_std": 0.14341,
+    "CD_Error_pct": 21.007,
+    "CD_Error_std": 42.274,
+    "Noise_Floor_std": 0.03115,
+    "Peak_Noise_diff": 0.27851,
+    "Median_Latency_ms": 13.2
+  },
+  "2. Scaled Skip (alpha=0.00)": {
+    "PSNR_dB": 7.2284,
+    "PSNR_std": 3.4442,
+    "SSIM": 0.03361,
+    "SSIM_std": 0.05106,
+    "CD_Error_pct": 99.989,
+    "CD_Error_std": 0.119,
+    "Noise_Floor_std": 0.1821,
+    "Peak_Noise_diff": 0.9671,
+    "Median_Latency_ms": 11.89
+  },
+  "2. Scaled Skip (alpha=0.25)": {
+    "PSNR_dB": 9.221,
+    "PSNR_std": 3.4354,
+    "SSIM": 0.15515,
+    "SSIM_std": 0.10075,
+    "CD_Error_pct": 97.542,
+    "CD_Error_std": 9.722,
+    "Noise_Floor_std": 0.15122,
+    "Peak_Noise_diff": 0.92735,
+    "Median_Latency_ms": 11.27
+  },
+  "2. Scaled Skip (alpha=0.50)": {
+    "PSNR_dB": 12.6272,
+    "PSNR_std": 3.3805,
+    "SSIM": 0.39883,
+    "SSIM_std": 0.14743,
+    "CD_Error_pct": 98.451,
+    "CD_Error_std": 146.779,
+    "Noise_Floor_std": 0.10355,
+    "Peak_Noise_diff": 0.68616,
+    "Median_Latency_ms": 11.43
+  },
+  "2. Scaled Skip (alpha=0.70)": {
+    "PSNR_dB": 16.7362,
+    "PSNR_std": 3.2546,
+    "SSIM": 0.59712,
+    "SSIM_std": 0.15433,
+    "CD_Error_pct": 54.881,
+    "CD_Error_std": 47.872,
+    "Noise_Floor_std": 0.06705,
+    "Peak_Noise_diff": 0.46816,
+    "Median_Latency_ms": 16.78
+  },
+  "2. Scaled Skip (alpha=0.80)": {
+    "PSNR_dB": 19.7209,
+    "PSNR_std": 3.1213,
+    "SSIM": 0.67775,
+    "SSIM_std": 0.15088,
+    "CD_Error_pct": 37.884,
+    "CD_Error_std": 31.931,
+    "Noise_Floor_std": 0.05043,
+    "Peak_Noise_diff": 0.37922,
+    "Median_Latency_ms": 10.88
+  },
+  "2. Scaled Skip (alpha=0.85)": {
+    "PSNR_dB": 21.6095,
+    "PSNR_std": 3.0424,
+    "SSIM": 0.70957,
+    "SSIM_std": 0.14974,
+    "CD_Error_pct": 33.409,
+    "CD_Error_std": 40.051,
+    "Noise_Floor_std": 0.04304,
+    "Peak_Noise_diff": 0.34363,
+    "Median_Latency_ms": 11.61
+  },
+  "2. Scaled Skip (alpha=0.90)": {
+    "PSNR_dB": 23.8519,
+    "PSNR_std": 3.0305,
+    "SSIM": 0.73345,
+    "SSIM_std": 0.14921,
+    "CD_Error_pct": 29.924,
+    "CD_Error_std": 46.254,
+    "Noise_Floor_std": 0.03677,
+    "Peak_Noise_diff": 0.31426,
+    "Median_Latency_ms": 12.73
+  },
+  "2. Scaled Skip (alpha=0.95)": {
+    "PSNR_dB": 26.4108,
+    "PSNR_std": 3.386,
+    "SSIM": 0.7474,
+    "SSIM_std": 0.1478,
+    "CD_Error_pct": 25.461,
+    "CD_Error_std": 47.883,
+    "Noise_Floor_std": 0.03238,
+    "Peak_Noise_diff": 0.29117,
+    "Median_Latency_ms": 13.16
+  },
+  "3. Bilateral EPF Skip (alpha=1.00, d=5, s_c=0.08)": {
+    "PSNR_dB": 27.0622,
+    "PSNR_std": 3.5774,
+    "SSIM": 0.63493,
+    "SSIM_std": 0.15097,
+    "CD_Error_pct": 21.203,
+    "CD_Error_std": 46.66,
+    "Noise_Floor_std": 0.03621,
+    "Peak_Noise_diff": 0.28505,
+    "Median_Latency_ms": 13.86
+  },
+  "3. Bilateral EPF Skip (alpha=0.90, d=5, s_c=0.08)": {
+    "PSNR_dB": 23.2564,
+    "PSNR_std": 2.7937,
+    "SSIM": 0.59277,
+    "SSIM_std": 0.15439,
+    "CD_Error_pct": 25.501,
+    "CD_Error_std": 24.586,
+    "Noise_Floor_std": 0.04331,
+    "Peak_Noise_diff": 0.3248,
+    "Median_Latency_ms": 13.34
+  },
+  "3. Bilateral EPF Skip (alpha=0.80, d=5, s_c=0.08)": {
+    "PSNR_dB": 19.408,
+    "PSNR_std": 2.979,
+    "SSIM": 0.53784,
+    "SSIM_std": 0.15787,
+    "CD_Error_pct": 38.116,
+    "CD_Error_std": 35.493,
+    "Noise_Floor_std": 0.05665,
+    "Peak_Noise_diff": 0.3932,
+    "Median_Latency_ms": 12.57
+  },
+  "4. Guided Filter Skip (alpha=1.00, d=7, s_c=0.12)": {
+    "PSNR_dB": 25.5872,
+    "PSNR_std": 3.0655,
+    "SSIM": 0.51455,
+    "SSIM_std": 0.16997,
+    "CD_Error_pct": 27.719,
+    "CD_Error_std": 98.338,
+    "Noise_Floor_std": 0.04462,
+    "Peak_Noise_diff": 0.30765,
+    "Median_Latency_ms": 14.51
+  },
+  "4. Guided Filter Skip (alpha=0.90, d=7, s_c=0.12)": {
+    "PSNR_dB": 22.4526,
+    "PSNR_std": 2.6695,
+    "SSIM": 0.47844,
+    "SSIM_std": 0.17343,
+    "CD_Error_pct": 29.666,
+    "CD_Error_std": 31.661,
+    "Noise_Floor_std": 0.05219,
+    "Peak_Noise_diff": 0.35426,
+    "Median_Latency_ms": 8.84
+  },
+  "5. Sobel Edge-Gated Skip (alpha=1.00, tau=0.04)": {
+    "PSNR_dB": 14.6541,
+    "PSNR_std": 2.7724,
+    "SSIM": 0.31122,
+    "SSIM_std": 0.14363,
+    "CD_Error_pct": 77.63,
+    "CD_Error_std": 204.02,
+    "Noise_Floor_std": 0.10574,
+    "Peak_Noise_diff": 0.7617,
+    "Median_Latency_ms": 5.83
+  },
+  "5. Sobel Edge-Gated Skip (alpha=0.90, tau=0.04)": {
+    "PSNR_dB": 13.6694,
+    "PSNR_std": 2.8884,
+    "SSIM": 0.29289,
+    "SSIM_std": 0.13225,
+    "CD_Error_pct": 80.841,
+    "CD_Error_std": 200.553,
+    "Noise_Floor_std": 0.10735,
+    "Peak_Noise_diff": 0.79532,
+    "Median_Latency_ms": 5.05
+  },
+  "6. D4 TTA + Bilateral EPF Skip (alpha=0.90)": {
+    "PSNR_dB": 23.2721,
+    "PSNR_std": 2.793,
+    "SSIM": 0.594,
+    "SSIM_std": 0.15482,
+    "CD_Error_pct": 25.563,
+    "CD_Error_std": 24.795,
+    "Noise_Floor_std": 0.04318,
+    "Peak_Noise_diff": 0.32452,
+    "Median_Latency_ms": 50.91
+  },
+  "6. D4 TTA + Edge-Gated Skip (alpha=0.90)": {
+    "PSNR_dB": 13.6717,
+    "PSNR_std": 2.8886,
+    "SSIM": 0.29317,
+    "SSIM_std": 0.13249,
+    "CD_Error_pct": 80.963,
+    "CD_Error_std": 200.543,
+    "Noise_Floor_std": 0.10729,
+    "Peak_Noise_diff": 0.79388,
+    "Median_Latency_ms": 57.22
+  }
+}
