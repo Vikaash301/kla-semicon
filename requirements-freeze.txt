@@ -46,7 +46,7 @@ flatbuffers==25.12.19
 fonttools==4.63.0
 frozenlist==1.8.0
 fsspec==2026.4.0
-gdown==5.2.0
+gdown==5.2.2
 gitdb==4.0.12
 GitPython==3.1.59
 google-auth==2.56.3
@@ -109,7 +109,7 @@ packaging==26.2
 pandas==2.3.3
 paramiko==5.0.0
 pfzy==0.3.4
-pillow==12.2.0
+pillow==12.3.0
 piq==0.8.0
 platformdirs==4.11.3
 pluggy==1.6.0
@@ -168,7 +168,7 @@ scipy==1.18.0
 scp==0.16.1
 screen_brightness_control==0.27.2
 sentry-sdk==2.68.0
-setuptools==78.1.0
+setuptools==83.0.0
 shellingham==1.5.4
 simsimd==6.5.16
 six==1.17.0
@@ -193,7 +193,7 @@ timm==1.0.28
 tokenizers==0.22.2
 tomli==2.4.1
 tomlkit==0.15.1
-torch==2.11.0+cu130
+torch==2.13.0
 torchvision==0.26.0+cu130
 tqdm==4.68.3
 tqdm-loggable==0.4.1
